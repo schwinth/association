@@ -80,7 +80,7 @@ print("Done.")
 from sklearn.cluster import AgglomerativeClustering
 
 for linkage in ('ward', 'average', 'complete'):
-    clustering = AgglomerativeClustering(linkage=linkage, n_clusters=11)
+    clustering = AgglomerativeClustering(linkage=linkage, n_clusters=10)
     t0 = time()
     clustering.fit(X_red)
     print("%s : %.2fs" % (linkage, time() - t0))
