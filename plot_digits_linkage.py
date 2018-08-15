@@ -33,7 +33,7 @@ X = digits.data
 y = digits.target
 n_samples, n_features = X.shape
 
-np.random.seed(0)
+np.random.seed(1234)
 
 def nudge_images(X, y):
     # Having a larger dataset shows more clearly the behavior of the
