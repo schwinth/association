@@ -28,12 +28,12 @@ from matplotlib import pyplot as plt
 
 from sklearn import manifold, datasets
 
-digits = datasets.load_digits(n_class=10)
+digits = datasets.load_digits(n_class=5)
 X = digits.data
 y = digits.target
 n_samples, n_features = X.shape
 
-np.random.seed(123)
+np.random.seed(456)
 
 def nudge_images(X, y):
     # Having a larger dataset shows more clearly the behavior of the
@@ -80,7 +80,7 @@ print("Done.")
 from sklearn.cluster import AgglomerativeClustering
 
 for linkage in ('ward', 'average', 'complete'):
-    clustering = AgglomerativeClustering(linkage=linkage, n_clusters=10)
+    clustering = AgglomerativeClustering(linkage=linkage, n_clusters=5)
     t0 = time()
     clustering.fit(X_red)
     print("%s : %.2fs" % (linkage, time() - t0))
